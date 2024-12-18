@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto mt-10 p-8 bg-white shadow-lg rounded-lg">
-        <h1 class="text-3xl font-semibold text-gray-800 mb-6">Donor Details</h1>
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Donor Details</h1>
         
         <!-- Donor Profile Picture -->
         <div class="flex items-center mb-6">
@@ -52,8 +52,8 @@
         <!-- Back Button -->
         <div class="mt-6">
             <a href="{{ route('admin.viewDonors') }}" 
-               class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                Back to List
+               class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600">
+               ← Back
             </a>
         </div>
     </div>

@@ -9,7 +9,17 @@
 <body class="bg-gray-100">
 
     <div class="container mx-auto p-8 mt-10 max-w-2xl bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Create New Campaign</h2>
+        <!-- Header with Back Button and Title -->
+        <div class="flex items-center mb-6">
+            <!-- Back Button -->
+            <a href="{{ route('admin.manageCampaigns') }}" 
+               class="mr-4 bg-gray-700 text-white font-medium py-2 px-4 rounded-lg hover:bg-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none">
+               ← Back
+            </a>
+
+            <!-- Title -->
+            <h2 class="text-2xl font-bold text-gray-800">Create New Campaign</h2>
+        </div>
         
         <!-- Success Message -->
         @if (session('success'))
@@ -37,7 +47,7 @@
                 <input type="text" 
                        id="title" 
                        name="title" 
-                       class="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                       class="mt-2 w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" 
                        value="{{ old('title') }}" 
                        required>
             </div>
@@ -48,7 +58,7 @@
                 <textarea id="description" 
                           name="description" 
                           rows="4" 
-                          class="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                          class="mt-2 w-full p-3 border border-gray-00 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" 
                           required>{{ old('description') }}</textarea>
             </div>
 
@@ -59,7 +69,7 @@
                        id="goal_amount" 
                        name="goal_amount" 
                        step="0.01" 
-                       class="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                       class="mt-2 w-full p-3 border border-gray-200 ounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                        value="{{ old('goal_amount') }}" 
                        required>
             </div>
@@ -70,7 +80,7 @@
                 <input type="date" 
                        id="start_date" 
                        name="start_date" 
-                       class="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                       class="mt-2 w-full p-3 border border-gray-200 ounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                        value="{{ old('start_date') }}" 
                        required>
             </div>
@@ -81,14 +91,14 @@
                 <input type="date" 
                        id="end_date" 
                        name="end_date" 
-                       class="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                       class="mt-2 w-full p-3 border border-gray-200 ounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                        value="{{ old('end_date') }}" 
                        required>
             </div>
 
             <!-- Submit Button -->
             <button type="submit" 
-                    class="w-full p-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    class="w-full p-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600">
                 Create Campaign
             </button>
         </form>

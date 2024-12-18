@@ -8,7 +8,16 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
     <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Add Donor</h2>
+        <!-- Back Button and Heading -->
+        <div class="flex items-center space-x-4 mb-6">
+            <!-- Back Button -->
+            <button onclick="history.back()" 
+                    class="px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg shadow hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800">
+                ← Back
+            </button>
+            <!-- Heading -->
+            <h2 class="text-2xl font-bold text-gray-800">Add Donor</h2>
+        </div>
 
         <!-- Success Message -->
         @if (session('success'))
@@ -37,7 +46,7 @@
                 <input type="text" 
                        id="name" 
                        name="name" 
-                       class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                       class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                        placeholder="Enter donor name" 
                        required>
             </div>
@@ -48,7 +57,7 @@
                 <input type="email" 
                        id="email" 
                        name="email" 
-                       class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                       class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                        placeholder="Enter donor email" 
                        required>
             </div>
@@ -59,13 +68,13 @@
                 <input type="text" 
                        id="contact_info" 
                        name="contact_info" 
-                       class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                       class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                        placeholder="Enter donor contact info (optional)">
             </div>
 
             <!-- Submit Button -->
             <button type="submit" 
-                    class="w-full bg-green-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    class="w-full bg-yellow-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:outline-none">
                 Save Donor
             </button>
         </form>

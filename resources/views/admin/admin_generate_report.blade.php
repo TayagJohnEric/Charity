@@ -65,7 +65,7 @@
 
             </div>
             <div class="absolute bottom-0 p-6 mb-[20px]">
-                <a href="{{ route('admin.login') }}" class="flex items-center text-gray-600 hover:text-blue-500">
+                <a href="{{ route('admin.login') }}" class="flex items-center text-gray-600 hover:text-yellow-500">
                     <i class="fas fa-sign-out-alt mr-3"></i> Log out
                 </a>
             </div>
@@ -124,7 +124,7 @@
             <a href="{{ route('admin.exportDonations', [
                 'campaign' => request('campaign'),
                 'date' => request('date'),
-            ]) }}" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-blue-600">
+            ]) }}" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
                 Export Donations
             </a>
 

@@ -9,7 +9,17 @@
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
 
     <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Edit Donor</h2>
+        <!-- Header with Back Button and Title -->
+        <div class="flex items-center mb-6">
+            <!-- Back Button -->
+            <a href="{{ route('admin.viewDonors') }}" 
+               class="mr-4 bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none">
+               ← Back
+            </a>
+
+            <!-- Title -->
+            <h2 class="text-2xl font-bold text-gray-800">Edit Donor</h2>
+        </div>
 
         <!-- Display success message if available -->
         @if (session('success'))
@@ -39,7 +49,7 @@
                        id="name" 
                        name="name" 
                        value="{{ old('name', $donor->name) }}" 
-                       class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+                       class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-500 focus:outline-none " 
                        placeholder="Enter donor name" 
                        required>
             </div>
@@ -51,25 +61,25 @@
                        id="email" 
                        name="email" 
                        value="{{ old('email', $donor->email) }}" 
-                       class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+                       class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-500 focus:outline-none " 
                        placeholder="Enter donor email" 
                        required>
             </div>
 
             <!-- Contact Info -->
             <div>
-                <label for="contact_info" class="block text-gray-700 font-medium mb-2">Contact Info</label>
+                <label for="contact_info" class="block text-gray-700 font-medium mb-2">Contact Number</label>
                 <input type="text" 
                        id="contact_info" 
                        name="contact_info" 
                        value="{{ old('contact_info', $donor->contact_info) }}" 
-                       class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+                       class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-500 focus:outline-none mb-5 " 
                        placeholder="Enter donor contact info (optional)">
             </div>
 
             <!-- Submit Button -->
             <button type="submit" 
-                    class="w-full bg-blue-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    class="w-full bg-yellow-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:outline-none">
                 Update Donor
             </button>
         </form>
